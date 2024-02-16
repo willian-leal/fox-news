@@ -15,6 +15,7 @@ O Fox News é um blog de notícias que fornece as últimas manchetes e atualiza�
 - Design responsivo para uma experiência de visualização ideal em todos os dispositivos.
 
 ## Melhorias Futuras
+- Implementar campo para usuários postarem seus blogs para a comunidade.
 - Implementar autenticação de usuário e permitir que os usuários salvem artigos favoritos.
 - Adicionar opções de compartilhamento em redes sociais para os artigos.
 - Aprimorar a funcionalidade de busca com filtros e opções de ordenação.
