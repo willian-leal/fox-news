@@ -1,0 +1,18 @@
+<a class="small-content" href={{post.url}} target="_blank">
+  <div class="small-image-content">
+    <img src={{post.urlToImage}} alt="" class="small-image">
+  </div>
+  <div class="small-text-content">
+    <div class="creator-date">
+      <span class="creator">{{post.source.name}}</span>
+      <mat-divider [vertical]="true" style="background-color: #fff; height: 12px; margin: 0 16px"></mat-divider>
+      <span class="data">{{formatDateString(post.publishedAt)}}</span>
+    </div>
+    <span class="title">
+      {{limitTitle(post.title, 60)}}
+    </span>
+    <div class="category-est_read_time">
+      <span class="est-read-time">8 mins read</span>
+    </div>
+  </div>
+</a>
