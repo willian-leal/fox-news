@@ -1,0 +1,50 @@
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #fff;
+
+  .text-content {
+    width: 504px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .title {
+      font-size: 72px;
+      font-weight: 300;
+    }
+
+    .description {
+      display: block;
+      margin-top: 24px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 24px;
+    }
+
+    .category-creator-date {
+      display: flex;
+      align-items: center;
+      width: 389px;
+      height: 20px;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  .image-content {
+    width: 359px;
+    height: 598px;
+
+    .big-image {
+      width: 359px;
+      height: 598px;
+      object-fit: cover;
+    }
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,16 @@
+<a class="main-content" href={{mainPost.url}} target="_blank">
+  <div class="text-content">
+    <div class="title-and-description">
+      <span class="title">{{limitTitle(mainPost.title, 60)}}</span>
+      <span class="description">{{mainPost.description}}</span>
+    </div>
+    <div class="category-creator-date">
+      <span class="creator">{{mainPost.source.name}}</span>
+      <mat-divider [vertical]="true" style="background-color: #fff; height: 12px; margin: 0 16px"></mat-divider>
+      <span class=" date">{{formatDateString(mainPost.publishedAt)}}</span>
+    </div>
+  </div>
+  <div class="image-content">
+    <img src={{mainPost.urlToImage}} alt="" class="big-image">
+  </div>
+</a>
