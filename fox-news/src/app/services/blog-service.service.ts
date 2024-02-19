@@ -13,10 +13,10 @@ export class BlogServiceService {
   constructor(private http: HttpClient) { }
 
   getSmallPosts() {
-    return this.http.get(`${this.apiUrl}?country=us&pageSize=5&apiKey=${this.apiKey}`);
+    return this.http.get(`${this.apiUrl}?country=us&category=general&pageSize=5&apiKey=${this.apiKey}`);
   }
 
   getMainPost() {
-    return this.http.get(`${this.apiUrl}?country=us&pageSize=1&apiKey=${this.apiKey}`);
+    return this.http.get(`${this.apiUrl}?country=us&category=general&pageSize=1&apiKey=${this.apiKey}`);
   }
 }

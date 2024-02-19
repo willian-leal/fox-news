@@ -1,9 +1,9 @@
 <div *ngIf="mainPost">
-  <a class="main-content" href={{mainPost.url}} target="_blank">
+  <a class="content" href={{mainPost.url}} target="_blank">
     <div class="text-content">
       <div class="title-and-description">
         <span class="title">{{limitTitle(mainPost.title, 60)}}</span>
-        <span class="description">{{mainPost.description}}</span>
+        <span class="description">{{limitDescription(mainPost.description, 200)}}</span>
       </div>
       <div class="category-creator-date">
         <span class="creator">{{mainPost.source.name}}</span>

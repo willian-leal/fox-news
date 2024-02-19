@@ -12,6 +12,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SmallContentComponent } from './components/small-content/small-content.component';
 import { BlogServiceService } from './services/blog-service.service';
 import { MainContentComponent } from './components/main-content/main-content.component';
+import { SectionComponent } from './components/section/section.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MainContentComponent } from './components/main-content/main-content.com
     NavbarComponent,
     BodyContentComponent,
     SmallContentComponent,
-    MainContentComponent
+    MainContentComponent,
+    SectionComponent
   ],
   imports: [
     BrowserModule,

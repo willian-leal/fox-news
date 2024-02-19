@@ -1,50 +1,94 @@
-.small-content {
-  width: 409px;
-  height: 134px;
+.content {
   display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: #fff;
+  align-items: center;
+  margin: 20px 0;
 
-  .small-image-content {
-    width: 130px;
-    height: 134px;
-    margin-right: 20px;
-
-    .small-image {
-      width: 130px;
-      height: 134px;
-      object-fit: cover;
-    }
-  }
-
-  .small-text-content {
+  .text-content {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column-reverse;
 
     .creator-date {
       display: flex;
-      align-items: center;
+      margin-top: 10px;
       font-size: 12px;
-      font-weight: 400;
-      color: rgba(255, 255, 255, 0.8);
+      color: darkgray;
     }
-
     .title {
-      font-size: 20px;
-      line-height: 26px;
-    }
-
-    .category-est_read_time {
-      display: flex;
-      align-items: center;
-      font-size: 12px;
-      font-weight: 400;
-      color: rgba(255, 255, 255, 0.8);
+      display: block;
+      font-size: 22px;
+      margin-top: 10px;
     }
   }
 
-  &:hover {
-    text-decoration: underline;
+  .image-content {
+    width: 100%;
+    .small-image {
+      width: 100%;
+    }
+  }
+}
+
+// Estilo para dispositivos de largura entre 768px e 1024px (Tablets em modo paisagem)
+@media (min-width: 768px) and (max-width: 1024px) {
+  .content {
+    flex-direction: row;
+    align-items: start;
+    gap: 20px;
+
+    .image-content{
+      width: 50%;
+    }
+  }
+}
+
+// Estilo para dispositivos de largura entre 320px e 480px (Smartphones em modo paisagem)
+@media (min-width: 1024px) {
+  .content {
+    flex-direction: row;
+    align-items: start;
+    gap: 20px;
+
+    .image-content {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .content {
+    margin: 0;
+    gap: 0;
+    justify-content: space-between;
+
+    .text-content {
+      width: 259px;
+    }
+
+    .image-content {
+      width: 130px;
+      height: 134px;
+      overflow: hidden;
+
+      .small-image {
+        width: 130px;
+        height: 134px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    &:hover {
+      text-decoration: underline 1px;
+      text-underline-offset: 4px;
+
+      .image-content{
+        .small-image {
+          transform: scale(1.1);
+        }
+      }
+    }
   }
 }

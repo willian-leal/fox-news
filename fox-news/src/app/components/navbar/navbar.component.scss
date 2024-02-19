@@ -1,52 +1,91 @@
 .navbar-container {
-  background-color: #000000;
-  color: #fff;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 64px;
 
-  .right-content, .center-content, .left-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  .left-content {
+    .fox-news-logo {
+      display: none;
+    }
 
-  .center-content {
-    font-size: 14px;
-    font-weight: 500;
-    width: 501px;
-    display: flex;
-    justify-content: space-between;
-
-    > span {
-      cursor: pointer;
+    .fox-news-name {
+      font-size: 1rem;
+      font-weight: 700;
     }
   }
 
-  .fox-news-logo {
-    height: 70px;
+  .center-content {
+    display: none
   }
 
-  .fox-news-name {
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-
-  .fox-news-logo, .fox-news-name {
-    cursor: pointer;
-  }
-
-  .singup-button {
-    width: 191px;
-    height: 32px;
-    border-radius: 100px;
-    border: solid 1px rgba(255, 255, 255, 0.5);
-    background-color: #000000;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 8px 16px;
-    cursor: pointer;
+  .right-content {
+    .singup-button {
+      width: 160px;
+      height: 25px;
+      border-radius: 100px;
+      border: solid 2px rgba(255, 255, 255, 0.5);
+      background-color: #000000;
+      color: #fff;
+      font-size: .8rem;
+      cursor: pointer;
+    }
   }
 }
 
+// Estilo para dispositivos de largura entre 768px e 1024px (Tablets em modo paisagem)
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-container {
+    .left-content {
+      display: flex;
+      align-items: center;
 
+      .fox-news-logo {
+        display: block;
+        height: 50px;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+// Estilo para dispositivos de largura entre 320px e 480px (Smartphones em modo paisagem)
+@media (min-width: 1024px) {
+  .navbar-container {
+
+    .left-content {
+      display: flex;
+      align-items: center;
+
+      .fox-news-logo {
+        display: block;
+        height: 50px;
+        margin-right: 1rem;
+      }
+
+      .fox-news-name {
+        font-size: 1.5rem;
+      }
+    }
+
+    .center-content {
+      width: 500px;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .right-content {
+      .singup-button {
+        font-size: 1rem;
+        width: 211px;
+        height: 32px;
+      }
+    }
+  }
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row{
+  padding: 0px;
+}

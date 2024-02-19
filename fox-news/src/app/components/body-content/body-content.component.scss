@@ -1,17 +1,29 @@
 .container {
-  margin: 48px 40px 0 40px;
-  height: 598px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
 
-  .left-side {
-    width: 903px;
-  }
+// Estilo para dispositivos de largura entre 768px e 1024px (Tablets em modo paisagem)
+@media (min-width: 768px) and (max-width: 1024px) {}
 
-  .right-side {
-    width: 409px;
+// Estilo para dispositivos de largura entre 320px e 480px (Smartphones em modo paisagem)
+@media (min-width: 1440px) {
+  .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
+    margin-top: 48px;
+
+    .left-side {
+      width: 903px;
+    }
+
+    .right-side {
+      width: 409px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 }
+

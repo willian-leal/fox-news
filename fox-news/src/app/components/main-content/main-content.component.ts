@@ -24,6 +24,14 @@ export class MainContentComponent implements OnInit {
     }
   }
 
+  limitDescription(description: string, limit: number) {
+    if( description.length > limit) {
+      return description.substring(0, limit) + '...';
+    } else {
+      return description;
+    }
+  }
+
   ngOnInit(): void {
   }
 }
