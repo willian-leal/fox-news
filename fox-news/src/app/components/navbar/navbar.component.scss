@@ -16,7 +16,17 @@
   }
 
   .center-content {
-    display: none
+    display: none;
+
+    > span {
+      text-transform: capitalize;
+    }
+
+    > span:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      cursor: pointer;
+    }
   }
 
   .right-content {

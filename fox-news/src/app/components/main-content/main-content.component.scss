@@ -80,6 +80,10 @@
 
     .text-content {
       width: 504px;
+      height: 598px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       .title-and-description {
         .title {
